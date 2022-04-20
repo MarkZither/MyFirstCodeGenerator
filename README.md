@@ -20,8 +20,20 @@ Running 'dotnet restore' on C:\Source\GitRepos\MyFirstSourceGenerator\src\MyFirs
   Restored C:\Source\GitRepos\MyFirstSourceGenerator\src\MyFirstSourceGenerator.Console\MyFirstSourceGenerator.Console.csproj (in 285 ms).
 Restore succeeded.
 
+PS C:\Source\GitRepos\MyFirstSourceGenerator> dotnet new classlib -o src/MyFirstSourceGenerator.Lib
+The template "Class Library" was created successfully.
+
+Processing post-creation actions...
+Running 'dotnet restore' on C:\Source\GitRepos\MyFirstSourceGenerator\src\MyFirstSourceGenerator.Lib\MyFirstSourceGenerator.Lib.csproj...
+  Determining projects to restore...
+  Restored C:\Source\GitRepos\MyFirstSourceGenerator\src\MyFirstSourceGenerator.Lib\MyFirstSourceGenerator.Lib.csproj (in 222 ms).
+Restore succeeded.
+
+PS C:\Source\GitRepos\MyFirstSourceGenerator> dotnet sln add .\src\MyFirstSourceGenerator.Lib\MyFirstSourceGenerator.Lib.csproj
+Project `src\MyFirstSourceGenerator.Lib\MyFirstSourceGenerator.Lib.csproj` added to the solution.
 ```
 
 ## Very first generated code
 
 Starting extremely simple I followed the steps in this blog post https://docs.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/source-generators-overview?msclkid=d4e406eec0db11eca190e3785e5bfdae.
+
