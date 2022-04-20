@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4E0F212A-31F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstCodeGenerator.Console", "src\MyFirstSourceGenerator.Console\MyFirstSourceGenerator.Console.csproj", "{BAF57B3B-70BC-4F1B-9933-142528D3F8AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstSourceGenerator.Lib", "src\MyFirstSourceGenerator.Lib\MyFirstSourceGenerator.Lib.csproj", "{2C7B1348-B3C6-46F6-969A-2FE1F3773D44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,13 @@ Global
 		{BAF57B3B-70BC-4F1B-9933-142528D3F8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAF57B3B-70BC-4F1B-9933-142528D3F8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAF57B3B-70BC-4F1B-9933-142528D3F8AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C7B1348-B3C6-46F6-969A-2FE1F3773D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C7B1348-B3C6-46F6-969A-2FE1F3773D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C7B1348-B3C6-46F6-969A-2FE1F3773D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C7B1348-B3C6-46F6-969A-2FE1F3773D44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BAF57B3B-70BC-4F1B-9933-142528D3F8AD} = {4E0F212A-31F7-4936-933F-6688D0CE5E1B}
+		{2C7B1348-B3C6-46F6-969A-2FE1F3773D44} = {4E0F212A-31F7-4936-933F-6688D0CE5E1B}
 	EndGlobalSection
 EndGlobal
