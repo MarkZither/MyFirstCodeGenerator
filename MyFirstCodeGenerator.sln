@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4E0F212A-31F7-4936-933F-6688D0CE5E1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstCodeGenerator.Console", "src\MyFirstCodeGenerator.Console\MyFirstCodeGenerator.Console.csproj", "{BAF57B3B-70BC-4F1B-9933-142528D3F8AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAF57B3B-70BC-4F1B-9933-142528D3F8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF57B3B-70BC-4F1B-9933-142528D3F8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF57B3B-70BC-4F1B-9933-142528D3F8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF57B3B-70BC-4F1B-9933-142528D3F8AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BAF57B3B-70BC-4F1B-9933-142528D3F8AD} = {4E0F212A-31F7-4936-933F-6688D0CE5E1B}
+	EndGlobalSection
+EndGlobal
