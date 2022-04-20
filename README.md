@@ -1,4 +1,4 @@
-# My First Code Generator
+# My First Source Generator
 
 I have worked with Boo script in the past, but [Boo](https://github.com/boo-lang/boo) and [RhinoDSL](https://github.com/ayende/rhino-dsl) have not been updated for years and are not compatible with .netstandard or .net6 so this is an attempt at an alternative.
 
@@ -8,16 +8,20 @@ As I am trying to get more familiar with the dotnet commands so just for my memo
 
 ``` powershell
 
-PS C:\Source\GitRepos\MyFirstCodeGenerator> dotnet new sln
+PS C:\Source\GitRepos\MyFirstSourceGenerator> dotnet new sln
 The template "Solution File" was created successfully.
 
-PS C:\Source\GitRepos\MyFirstCodeGenerator> dotnet new console --output src\MyFirstCodeGenerator.Console
+PS C:\Source\GitRepos\MyFirstSourceGenerator> dotnet new console --output src\MyFirstSourceGenerator.Console
 The template "Console App" was created successfully.
 
 Processing post-creation actions...
-Running 'dotnet restore' on C:\Source\GitRepos\MyFirstCodeGenerator\src\MyFirstCodeGenerator.Console\MyFirstCodeGenerator.Console.csproj...
+Running 'dotnet restore' on C:\Source\GitRepos\MyFirstSourceGenerator\src\MyFirstSourceGenerator.Console\MyFirstSourceGenerator.Console.csproj...
   Determining projects to restore...
-  Restored C:\Source\GitRepos\MyFirstCodeGenerator\src\MyFirstCodeGenerator.Console\MyFirstCodeGenerator.Console.csproj (in 285 ms).
+  Restored C:\Source\GitRepos\MyFirstSourceGenerator\src\MyFirstSourceGenerator.Console\MyFirstSourceGenerator.Console.csproj (in 285 ms).
 Restore succeeded.
 
 ```
+
+## Very first generated code
+
+Starting extremely simple I followed the steps in this blog post https://docs.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/source-generators-overview?msclkid=d4e406eec0db11eca190e3785e5bfdae.
