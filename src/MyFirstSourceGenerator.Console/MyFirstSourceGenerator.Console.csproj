@@ -8,9 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyFirstSourceGenerator.Lib\MyFirstSourceGenerator.Lib.csproj"
-                      OutputItemType="Analyzer"
-                      ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\MyFirstSourceGenerator.Lib\MyFirstSourceGenerator.Lib.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="MyDSLFiles\simple.mydsl" />
   </ItemGroup>
 
 </Project>

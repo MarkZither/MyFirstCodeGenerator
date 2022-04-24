@@ -1,0 +1,2 @@
+﻿AreaSquare(l)       = pow(l, 2)
+AreaRectangle(w, h) = w * h

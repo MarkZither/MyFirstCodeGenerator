@@ -3,8 +3,11 @@ using Microsoft.CodeAnalysis.Text;
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
+
+using Tokens = System.Collections.Generic.IEnumerable<MyFirstSourceGenerator.Lib.Token>;
 
 namespace MyFirstSourceGenerator.Lib
 {
@@ -14,11 +17,33 @@ namespace MyFirstSourceGenerator.Lib
     [Generator]
     public class MyDSLGenerator : ISourceGenerator
     {
+        private const string libraryCode = @"
+using System.Linq;
+using System;
+using System.Collections.Generic;
+namespace Maths {
+ public static class FormulaHelpers {
+        public static IEnumerable<double> ConvertToDouble(IEnumerable<int> col)
+        {
+            foreach (var s in col)
+                yield return (double) s;
+        }
+        public static double MySum(int start, int end, Func<double, double> f) =>
+            Enumerable.Sum<double>(ConvertToDouble(Enumerable.Range(start, end - start)), f);
+    }
+}
+";
         public void Execute(GeneratorExecutionContext context)
         {
+#if DEBUG
+            if (!Debugger.IsAttached)
+            {
+                Debugger.Launch();
+            }
+#endif 
             foreach (AdditionalText file in context.AdditionalFiles)
             {
-                if (Path.GetExtension(file.Path).Equals(".math", StringComparison.OrdinalIgnoreCase))
+                if (Path.GetExtension(file.Path).Equals(".mydsl", StringComparison.OrdinalIgnoreCase))
                 {
                     // Load formulas from .math files
                     var mathText = file.GetText();
@@ -49,7 +74,14 @@ namespace MyFirstSourceGenerator.Lib
 
         public void Initialize(GeneratorInitializationContext context)
         {
-            throw new NotImplementedException();
+#if DEBUG
+            // https://nicksnettravels.builttoroam.com/debug-code-gen/
+            if (!Debugger.IsAttached)
+            {
+                Debugger.Launch();
+            }
+#endif 
+            context.RegisterForPostInitialization((pi) => pi.AddSource("__MathLibrary__.cs", libraryCode));
         }
     }
 }
